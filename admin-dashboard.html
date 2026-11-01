@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SnapFix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/report.js"></script>
+</head>
+<body onload="updateNavForLoginState(); loadAllReports();">
+
+    <header class="navbar">
+            <h1 class="logo">SnapFix</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="my-reports.html">My Reports</a>
+            <a href="new-report.html">Report an Issue</a>
+            <a href="admin-dashboard.html" class="active">Maintenance</a>
+            <a href="about.html">About Us</a>
+            <span id="navUserSlot"></span>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Maintenance - All Facility Reports</h2>
+        <p class="subtitle">Anyone can view this page for now - it shows every report submitted so far and lets you update its status.</p>
+
+        <div class="search-bar">
+            <input id="searchTitle" type="text" placeholder="Search title...">
+            <select id="searchStatus">
+                <option value="">All Status</option>
+                <option value="pending">Pending</option>
+                <option value="in_progress">In Progress</option>
+                <option value="resolved">Resolved</option>
+                <option value="rejected">Rejected</option>
+            </select>
+            <button type="button" onclick="searchReports(true)">Search</button>
+            <button type="button" class="secondary" onclick="loadAllReports()">Reset</button>
+        </div>
+
+        <div id="dynamicReportList"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SnapFix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/report.js"></script>
+</head>
+<body onload="updateNavForLoginState()">
+
+    <header class="navbar">
+            <h1 class="logo">SnapFix</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="my-reports.html">My Reports</a>
+            <a href="new-report.html">Report an Issue</a>
+            <a href="admin-dashboard.html">Maintenance</a>
+            <a href="about.html" class="active">About Us</a>
+            <span id="navUserSlot"></span>
+        </nav>
+    </header>
+
+    <div class="container narrow">
+        <div class="about-card">
+            <img src="Images/logo-icon.png" alt="SnapFix Symbol" class="about-logo">
+
+            <h2 style="text-align:center;">About SnapFix</h2>
+            <p>
+                Most people don't report a broken chair or a flickering light because it just
+                feels like too much effort - finding the right form, figuring out who to email,
+                writing a description that actually makes sense. SnapFix was built to remove that
+                friction. See something broken? Snap a photo, and you're basically done - no long
+                write-ups, no guessing which category it falls under.
+            </p>
+            <p>
+                AWS Rekognition looks at the photo, figures out what's in it, and suggests the
+                damage category for you. That turns reporting a facility issue from a chore into
+                something that takes less time than sending a text, while maintenance teams still
+                get clear, consistent reports to work from instead of vague descriptions.
+            </p>
+        </div>
+
+        <section class="location-section">
+            <div class="location-card">
+                <div class="location-text">
+                    <a href="index.html" class="location-btn">Back to Home</a>
+                </div>
+                <div class="location-image">
+                    <img src="https://images.pexels.com/photos/38209400/pexels-photo-38209400.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200" alt="Facility building">
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

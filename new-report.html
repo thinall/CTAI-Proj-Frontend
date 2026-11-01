@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Issue - SnapFix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/report.js"></script>
+</head>
+<body onload="updateNavForLoginState(); checkLogin();">
+
+    <header class="navbar">
+            <h1 class="logo">SnapFix</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="my-reports.html">My Reports</a>
+            <a href="new-report.html" class="active">Report an Issue</a>
+            <a href="admin-dashboard.html">Maintenance</a>
+            <a href="about.html">About Us</a>
+            <span id="navUserSlot"></span>
+        </nav>
+    </header>
+
+    <div class="container narrow">
+        <div class="form-card">
+            <h2>Report a Damaged Facility</h2>
+
+            <form id="insertForm" method="post" onsubmit="submitNewReport(); return false">
+
+                <label for="image_tb">1. Upload a Photo</label>
+                <input type="file" id="image_tb" name="image" accept="image/*" onchange="previewImage()" required>
+                <img id="previewImg" alt="Preview">
+
+                <div class="btn-row">
+                    <button type="button" class="secondary" onclick="analyzeImageNow()">Analyze with AWS Rekognition</button>
+                </div>
+                <div id="analysisBox"></div>
+                <hr>
+
+                <label for="title_tb">2. Short Title</label>
+                <input type="text" id="title_tb" name="title" placeholder="e.g. Broken chair in Lecture Theatre 3" required>
+
+                <label for="location_tb">3. Location</label>
+                <input type="text" id="location_tb" name="location" placeholder="e.g. Block A, Level 2, Room 204" required>
+
+                <label for="category_tb">4. Category</label>
+                <select id="category_tb" name="category" required>
+                    <option value="">Select a category</option>
+                    <option value="Furniture Damage">Furniture Damage</option>
+                    <option value="Electrical Issue">Electrical Issue</option>
+                    <option value="Plumbing Issue">Plumbing Issue</option>
+                    <option value="Structural Damage">Structural Damage</option>
+                    <option value="Door / Window Issue">Door / Window Issue</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div class="hint">Auto-filled after you click "Analyze with AWS Rekognition" above - you can still change it.</div>
+
+                <label for="description_tb">5. Description</label>
+                <textarea id="description_tb" name="description" placeholder="Add any extra detail that could help the maintenance team..." required></textarea>
+
+                <div class="btn-row">
+                    <button type="submit">Submit Report</button>
+                    <button type="button" class="secondary" onclick="location.href='my-reports.html'">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

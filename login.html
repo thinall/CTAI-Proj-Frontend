@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - SnapFix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/report.js"></script>
+</head>
+<body>
+
+    <header class="navbar">
+            <h1 class="logo">SnapFix</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Sign Up</a>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <div class="login-card">
+            <h2>Log In</h2>
+            <p class="subtitle">Log in to report or track facility issues.</p>
+
+            <form id="loginForm" onsubmit="loginUser(); return false">
+                <label for="email_tb">Email</label>
+                <input type="text" id="email_tb" name="email" required>
+
+                <label for="password_tb">Password</label>
+                <input type="password" id="password_tb" name="password" required>
+
+                <div class="btn-row">
+                    <button type="submit" class="primary">Log In</button>
+                </div>
+            </form>
+
+            <p class="form-foot">Don't have an account? <a href="register.html">Sign up here</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

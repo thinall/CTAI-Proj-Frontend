@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Details - SnapFix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/report.js"></script>
+</head>
+<body onload="updateNavForLoginState(); loadReportDetail();">
+
+    <header class="navbar">
+            <h1 class="logo">SnapFix</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="my-reports.html">My Reports</a>
+            <a href="new-report.html">Report an Issue</a>
+            <a href="admin-dashboard.html">Maintenance</a>
+            <a href="about.html">About Us</a>
+            <span id="navUserSlot"></span>
+        </nav>
+    </header>
+
+    <div class="container narrow">
+        <div class="details-card">
+
+            <h2 id="reportTitle">Report title</h2>
+            <span id="statusPill" class="status-pill status-pending">Pending</span>
+
+            <img id="mainImage" src="Images/no-image.png" alt="Report photo" class="details-image">
+
+            <div class="details-info">
+                <p><strong>Location:</strong> <span id="location"></span></p>
+                <p><strong>Category:</strong> <span id="category"></span></p>
+                <p><strong>Reported by:</strong> <span id="reportedBy"></span></p>
+                <p><strong>Submitted:</strong> <span id="createdAt"></span></p>
+            </div>
+            <hr>
+
+            <h3>Description</h3>
+            <p id="description"></p>
+
+            <h3>AWS Rekognition - Detected Labels</h3>
+            <div id="tagList">No labels recorded.</div>
+            <hr>
+
+            <h3>Update Status</h3>
+            <div class="status-update-row">
+                <select id="status_tb">
+                    <option value="pending">Pending</option>
+                    <option value="in_progress">In Progress</option>
+                    <option value="resolved">Resolved</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+                <button type="button" onclick="updateReportStatus()">Save Status</button>
+            </div>
+
+            <div class="btn-row">
+                <button type="button" class="delete" onclick="deleteThisReport()">Delete</button>
+                <button type="button" class="secondary" onclick="goBackToList()">Back</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

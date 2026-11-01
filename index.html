@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapFix - Facility Damage Reporting</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/report.js"></script>
+</head>
+<body onload="updateNavForLoginState(); loadHomepageReports();">
+
+    <header class="navbar">
+            <h1 class="logo">SnapFix</h1>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="my-reports.html">My Reports</a>
+            <a href="new-report.html">Report an Issue</a>
+            <a href="admin-dashboard.html">Maintenance</a>
+            <a href="about.html">About Us</a>
+            <span id="navUserSlot"></span>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="home-hero">
+            <img src="https://images.pexels.com/photos/38209400/pexels-photo-38209400.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200" alt="SnapFix banner" class="home-hero-img">
+            <div class="home-hero-overlay">
+                <h1 class="hero-title">Report Facility Issues in Seconds</h1>
+            </div>
+            </div>
+        </div>
+
+        <div class="stat-strip">
+            <div class="stat-box">
+                <div class="stat-num">3</div>
+                <div class="stat-label">Simple Steps</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">1 Photo</div>
+                <div class="stat-label">Is All It Takes</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num">24/7</div>
+                <div class="stat-label">Report Anytime</div>
+            </div>
+            <button type="button" class="stat-strip-btn" onclick="location.href='new-report.html'">Report Now</button>
+        </div>
+
+        <div class="info-section">
+            <div class="info-text">
+                <h2>Snap a Photo Instead of Writing Paragraphs</h2>
+                <p>
+                    Broken chairs, faulty lights, and damaged floors often go unnoticed or get
+                    reported far too late. SnapFix lets students and staff upload a photo of
+                    the damage instead of writing a long, unclear description, so maintenance
+                    teams know exactly what they're dealing with.
+                </p>
+            </div>
+            <div class="info-image">
+                <span class="info-image-inner">
+                    <img src="https://images.pexels.com/photos/11606687/pexels-photo-11606687.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200" alt="Reporting a facility issue with a photo">
+                    <span class="info-badge">📸</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="info-section reverse">
+            <div class="info-image">
+                <img src="https://images.pexels.com/photos/27928759/pexels-photo-27928759.jpeg?auto=compress&cs=tinysrgb&h=627&fit=crop&w=1200" alt="Maintenance team fixing an issue">
+            </div>
+            <div class="info-text">
+                <h2>AWS Rekognition Does the Rest</h2>
+                <p>
+                    Once a photo is uploaded, AWS Rekognition analyses the image and identifies
+                    the object involved - a chair, a light fixture, a sink, and so on - and
+                    suggests a damage category automatically. This cuts down on confusion
+                    between users and the maintenance team and speeds up repair time.
+                </p>
+            </div>
+        </div>
+        
+        <h2 style="margin-top:12px;">   Recent Reports</h2>
+        <p class="subtitle">    A live look at what's already been reported across campus.</p>
+
+        <div id="homeReportList"></div>
+
+        <p style="text-align:center; margin-top:8px;">
+            <a href="admin-dashboard.html" class="location-btn">Manage All Reports on Maintenance</a>
+        </p>
+    </div>
+
+</body>
+</html>
